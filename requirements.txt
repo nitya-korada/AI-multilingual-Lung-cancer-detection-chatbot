@@ -14,3 +14,5 @@ reportlab
 Pillow
 tqdm
 openpyxl
+opencv-python-headless
+opencv-contrib-python-headless
