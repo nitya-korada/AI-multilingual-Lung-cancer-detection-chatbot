@@ -8,6 +8,9 @@ Original file is located at
 """
 
 import os
+os.makedirs("/tmp/.streamlit", exist_ok=True)
+os.environ["STREAMLIT_HOME"] = "/tmp"
+os.environ["XDG_CONFIG_HOME"] = "/tmp"
 import requests
 
 def download_model(url, filename):
