@@ -7,6 +7,19 @@ Original file is located at
     https://colab.research.google.com/drive/1iE62E7VLYJEhKbfTPZ5UFzGkrjHbHECI
 """
 
+import os
+import requests
+
+def download_model(url, filename):
+    if not os.path.exists(filename):
+        print(f"Downloading {filename}...")
+        r = requests.get(url)
+        with open(filename, "wb") as f:
+            f.write(r.content)
+        print("Download complete.")
+download_model("https://huggingface.co/Nitya9540/lung-cancer-chatbot-models/resolve/main/swin_lung_cancer.pth", "swin_lung_cancer.pth")
+download_model("https://huggingface.co/Nitya9540/lung-cancer-chatbot-models/resolve/main/vit_lung_classifier.pth", "vit_lung_classifier.pth")
+
 import streamlit as st
 import torch
 import io
