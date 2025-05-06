@@ -1,10 +1,10 @@
 streamlit
 torch
-transformers
-scikit-learn
+torchvision
+clip-anytorch
 opencv-python
-matplotlib
+transformers
+numpy
 Pillow
-gdown
-requests
-torch
+langdetect
+reportlab
