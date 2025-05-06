@@ -8,6 +8,7 @@ Original file is located at
 """
 
 import os
+os.environ["STREAMLIT_BROWSER_GATHERUSAGESTATS"] = "false"
 os.makedirs("/tmp/.streamlit", exist_ok=True)
 os.environ["STREAMLIT_HOME"] = "/tmp"
 os.environ["XDG_CONFIG_HOME"] = "/tmp"
