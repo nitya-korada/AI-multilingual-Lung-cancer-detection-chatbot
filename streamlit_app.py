@@ -94,7 +94,7 @@ transform = transforms.Compose([
 @st.cache_resource
 def load_nllb():
     model_name = "facebook/nllb-200-distilled-600M"
-     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
     return tokenizer, model
 
