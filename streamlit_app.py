@@ -13,16 +13,32 @@ os.makedirs("/tmp/.streamlit", exist_ok=True)
 os.environ["STREAMLIT_HOME"] = "/tmp"
 os.environ["XDG_CONFIG_HOME"] = "/tmp"
 import requests
+import torch
 
 def download_model(url, filename):
-    if not os.path.exists(filename):
+    model_path = os.path.join("/tmp", filename)
+    if not os.path.exists(model_path):
         print(f"Downloading {filename}...")
         r = requests.get(url)
-        with open(filename, "wb") as f:
+        with open(model_path, "wb") as f:
             f.write(r.content)
         print("Download complete.")
-download_model("https://huggingface.co/Nitya9540/lung-cancer-chatbot-models/resolve/main/swin_lung_cancer.pth", "swin_lung_cancer.pth")
-download_model("https://huggingface.co/Nitya9540/lung-cancer-chatbot-models/resolve/main/vit_lung_classifier.pth", "vit_lung_classifier.pth")
+    return model_path
+
+# Download models to /tmp
+swin_path = download_model(
+    "https://huggingface.co/Nitya9540/lung-cancer-chatbot-models/resolve/main/swin_lung_cancer.pth",
+    "swin_lung_cancer.pth"
+)
+
+vit_path = download_model(
+    "https://huggingface.co/Nitya9540/lung-cancer-chatbot-models/resolve/main/vit_lung_classifier.pth",
+    "vit_lung_classifier.pth"
+)
+
+# Load models from downloaded paths
+swin_model.load_state_dict(torch.load(swin_path, map_location=torch.device('cpu')))
+vit_model.load_state_dict(torch.load(vit_path, map_location=torch.device('cpu')))
 
 import streamlit as st
 import torch
