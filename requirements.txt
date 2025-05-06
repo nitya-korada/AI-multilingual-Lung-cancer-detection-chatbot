@@ -3,7 +3,8 @@ torch
 torchvision
 transformers
 pydicom
-opencv-python
+opencv-python-headless
+opencv-contrib-python-headless
 numpy
 scikit-learn
 pandas
@@ -14,5 +15,3 @@ reportlab
 Pillow
 tqdm
 openpyxl
-opencv-python-headless
-opencv-contrib-python-headless
