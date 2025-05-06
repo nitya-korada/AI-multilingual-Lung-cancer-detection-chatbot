@@ -4,7 +4,6 @@ torchvision
 transformers
 pydicom
 opencv-python-headless
-opencv-contrib-python-headless
 numpy
 scikit-learn
 pandas
@@ -15,3 +14,4 @@ reportlab
 Pillow
 tqdm
 openpyxl
+git+https://github.com/openai/CLIP.git
