@@ -14,6 +14,7 @@ os.environ["STREAMLIT_HOME"] = "/tmp"
 os.environ["XDG_CONFIG_HOME"] = "/tmp"
 import requests
 import torch
+import torch.nn as nn
 
 def download_model(url, filename):
     model_path = os.path.join("/tmp", filename)
