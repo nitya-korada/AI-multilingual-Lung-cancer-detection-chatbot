@@ -1,0 +1,10 @@
+streamlit
+torch
+transformers
+scikit-learn
+opencv-python
+matplotlib
+Pillow
+gdown
+requests
+torch
