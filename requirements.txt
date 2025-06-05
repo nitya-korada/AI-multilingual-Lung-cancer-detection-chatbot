@@ -10,7 +10,7 @@ scikit-learn
 pandas
 matplotlib
 seaborn
-sentencepiece
+https://files.pythonhosted.org/packages/68/44/89d7e845a188bff003a35665cc3a4be589731b0383d0f5b89f9cc237aeb3/sentencepiece-0.1.99-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
 langdetect
 reportlab
 Pillow
