@@ -3,16 +3,13 @@ torch
 torchvision
 transformers
 pydicom
-opencv-python
 opencv-python-headless
 opencv-contrib-python-headless
 numpy
 scikit-learn
 pandas
-git+https://github.com/openai/CLIP.git
 matplotlib
 seaborn
-transformers
 sentencepiece
 langdetect
 reportlab
@@ -20,6 +17,7 @@ Pillow
 tqdm
 openpyxl
 altair
-pandas
-sentencepiece
 protobuf
+# optional: clip install may fail, consider using clip-anytorch
+# git+https://github.com/openai/CLIP.git
+clip-anytorch
